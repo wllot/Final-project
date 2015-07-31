@@ -11,6 +11,7 @@
    <p> Your recommended area of work is <%=@first_choice%>. </p>
    <p> Here are a few volunteer opportunities for you: </p>
    <p> <%@interest_hash[@first_choice.to_sym].each do |key, value|%>
+     <br>
      <%= key%>
      <%= value%>
     <%end%> </p>
