@@ -2,14 +2,17 @@
 <html>
  <head>
   <meta charset="UTF-8">
+    <link rel = "stylesheet" type = "results_style/css" href = "css/results_style.css">
   <title>Results</title>
  </head>
  <body>
+   <div id="background"> <img src = "https://thedelphianschool.files.wordpress.com/2013/10/community-service1.jpg"> </div>
    <h1>Based on your survey results... </h1>
    <p> Your recommended area of work is <%=@first_choice%>. </p>
    <p> Here are a few volunteer opportunities for you: </p>
    <p> <%@interest_hash[@first_choice.to_sym].each do |key, value|%>
-     <%= key%>: <%= value%>
+     <%= key%>
+     <%= value%>
     <%end%> </p>
  </body>
 </html>
