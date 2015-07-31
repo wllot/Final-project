@@ -20,7 +20,7 @@ class MyApp < Sinatra::Base
                                    :"Kid Coachers" => "http://www.kidcoachers.com"},
                       :animals => {:"Cat care volunteers" => "https://www.volunteermatch.org/search/opp1808429.jsp",
                                   :"Dog Walkers" => "http://createthegood.org/volunteer/opportunity-details/13422"},
-                      :poor => {:"Hunger Projects" => "https://www.newyorkcares.org/program-areas/hunger",
+      :"helping the poor" => {:"Hunger Projects" => "https://www.newyorkcares.org/program-areas/hunger",
                                 :"Jersey Cares" => "http://www.jerseycares.org/HOC__Volunteer_Opportunity_Search_Page?isSavedSearch=yes&txtdtFrm=01/13/14&dstnc=0&ssrs0=Hunger%20%26%20Homelessness&ctCn=All%20Countries"},
                       :enviroment => {:"Get The Filter Out" => "https://www.dosomething.org/campaigns/gtfo?source=campaigns",
                                      :"It's My Park" => "http://www.cityparksfoundation.org/partnerships-for-parks/its-my-park-day/"}}
@@ -34,7 +34,7 @@ class MyApp < Sinatra::Base
       @first_choice = "animals"
       
     elsif interest_array.index(interest_array.max) == 3
-      @first_choice = "poor"
+      @first_choice = "helping the poor"
       
     elsif interest_array.index(interest_array.max) == 4
       @first_choice = "enviroment"
